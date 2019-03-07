@@ -1,0 +1,82 @@
+{# Plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+{#  TITULO #}
+{% block title %}
+Contactar
+{% endblock %}
+{#  CONTENIDO #}
+{% block contenidoDF %}
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Cafe Diana Florez
+            <small>Contactar</small>
+        </h1>
+
+        <!-- Sede PASTO -->
+        {% if sitio =='pasto' or sitio=='todos' %}
+        <div class="row">
+            <!-- Map Column -->
+            <div class="col-lg-8 mb-4">
+                <!-- Embedded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63822.77320390619!2d-77.31224239391838!3d1.2136110370850384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ed48761b92a73%3A0x44a368566cc3a522!2sPasto%2C+Narino%2C+Colombia!5e0!3m2!1sen!2sus!4v1551658168455" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-lg-4 mb-4">
+                <h3>Contact Details Pasto</h3>
+                <p>
+                3481 Melrose Place
+                <br>Beverly Hills, CA 90210
+                <br>
+                </p>
+                <p>
+                <abbr title="Phone">P</abbr>: (123) 456-7890
+                </p>
+                <p>
+                <abbr title="Email">E</abbr>:
+                <a href="mailto:name@example.com">name@example.com
+                </a>
+                </p>
+                <p>
+                <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+                </p>
+            </div>
+        </div>
+        {% endif %}
+        <!-- FIN PASTO -->
+
+        <!-- Sede Bogota -->
+        {% if sitio =='bogota' or sitio=='todos' %}
+        <div class="row">
+            <!-- Map Column -->
+            <div class="col-lg-8 mb-4">
+                <!-- Embedded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.42769771895!2d-74.03296357602498!3d4.695512437839333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x155d7907c04b881!2sStarbucks+Usaquen!5e0!3m2!1sen!2sus!4v1551659241381" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-lg-4 mb-4">
+                <h3>Contact Details Bogota</h3>
+                <p>
+                3481 Melrose Place
+                <br>Beverly Hills, CA 90210
+                <br>
+                </p>
+                <p>
+                <abbr title="Phone">P</abbr>: (123) 456-7890
+                </p>
+                <p>
+                <abbr title="Email">E</abbr>:
+                <a href="mailto:name@example.com">name@example.com
+                </a>
+                </p>
+                <p>
+                <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+                </p>
+            </div>
+        </div>
+        {% endif %}
+        <!-- FIN PASTO -->
+
+    </div>
+
+{% endblock %}

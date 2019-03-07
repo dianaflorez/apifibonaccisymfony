@@ -1,0 +1,65 @@
+{# Plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+{#  TITULO #}
+{% block title %}
+Nuestra empresa
+{% endblock %}
+{#  CONTENIDO #}
+{% block contenidoDF %}
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Cafe Diana Florez
+        <small>Equipo</small>
+        </h1>
+
+        <!-- Image Header -->
+        <img class="img-fluid rounded mb-4" src="{{ asset('images/santorini-island-1.jpg')}}" alt="">
+
+        <h2>Nuestro Equipo</h2>    
+         <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 text-center">
+                {# <h4 class="card-header">Card Title</h4> #}
+                <img class="img-fluid rounded mb-4" src="{{ asset('images/user1.jpeg')}}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Camilo</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Director</h6>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">name@example.com</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('images/user2.jpeg')}}" alt="">
+                {# <h4 class="card-header">Card Title</h4> #}
+                <div class="card-body">
+                    <h4 class="card-title">Daniel</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#">name@example.com</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                <img class="img-fluid rounded mb-4" src="{{ asset('images/user3.jpeg')}}" alt="">
+                {# <h4 class="card-header">Card Title</h4> #}
+                <div class="card-body">
+                    <h4 class="card-title">Maria</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- /.row -->
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{# Plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+{# {% form_theme form 'form/lugarForm.html.twig' %} #}
+
+{#  TITULO #}
+{% block title %}Login{% endblock %}
+{#  CONTENIDO #}
+{% block contenidoDF %}
+    <!-- Page Content -->
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Lugares Diana Florez
+      <small>Login de usuario</small>
+    </h1>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        {% if error %}
+            <h3>{{ error.messageKey|trans(error.messageData, 'security') }}</h3>
+        {% endif %}
+        <form action="{{ path('login') }}" method="post">
+          <div class="control-group form-group">
+            <div class="controls">
+              <label for="username">Nombre de usuario:</label>
+              <input class="form-control" type="text" id="username" name="_username" value="{{last_username}}" />
+            </div>
+          </div>
+
+          <div class="control-group form-group">
+            <div class="controls">          
+              <label for="password">Clave:</label>
+              <input class="form-control" type="password" id="password" name="_password" />
+            </div>
+          </div>
+
+          {#
+              If you want to control the URL the user
+              is redirected to on success (more details below)
+              <input type="hidden" name="_target_path" value="/account" />
+          #}
+
+          <button class="btn btn-primary" type="submit">login</button>
+      </form>
+      </div>
+      <div class="col-lg-6">
+        <h2>Como registrarte ?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+{% endblock %}

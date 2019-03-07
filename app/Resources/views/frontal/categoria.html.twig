@@ -1,0 +1,67 @@
+{# Plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+{#  TITULO #}
+{% block title %}
+Categoria seleccionado
+{% endblock %}
+{#  CONTENIDO #}
+{% block contenidoDF %}
+    <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Todos nuestras categorias
+      <small>...</small>
+    </h1>
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+      <div class="col-md-8">
+        <img class="img-fluid" src="{{asset(lugarimg~categoria.foto)}}" alt="">
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="my-3">{{categoria.nombre}}</h3>
+        <p>{{ categoria.descripcion }}</p>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+    <!-- Related Projects Row -->
+    <h3 class="my-4">Otros Categorias</h3>
+
+    <div class="row">
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+{% endblock %}
