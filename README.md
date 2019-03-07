@@ -1,4 +1,10 @@
-symfonyinicio
+symfony examenn API 
 =============
 
-A Symfony project created on March 1, 2019, 6:01 pm.
+La ruta para el acceso es:
+
+http://localhost:8000/api/listar   Metodo POST
+
+{
+	"limite": 40
+}
